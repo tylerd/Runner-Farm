@@ -1,0 +1,17 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vmssName": {
+            "value": "TGD-Runner-VMSS"
+        },
+        "adminPassword": {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/86a8cacb-30d6-457d-bc98-ef3dc3e4cb9e/resourceGroups/TGD-Runner-KV/providers/Microsoft.KeyVault/vaults/TGD-Runner-KV"
+                },
+                "secretName": "adminPassword"
+            }
+        }
+    }
+}
